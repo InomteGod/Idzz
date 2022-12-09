@@ -1,0 +1,16 @@
+from .. import loader  
+from asyncio import sleep
+
+class IrisBotMod(loader.Module):
+ """Я рекомендую создать вам чат ,где вы будете использовать данный модуль, чтобы вас не беспокоили лишнии уведомления и тд. Так же можно это делать в лс Iris-а."""
+ strings = {"name": "IrisBot"}
+ 
+ def init(self):
+  self.farm = True
+  self.virys = True
+  
+ async def farmcmd(self, message):
+  """[by t.me/ObitelInomte ]Включает команду "Ферма". Чтобы остановить, используйте "ирисфарм стоп"."""
+  while self.farm:
+   await message.reply("Ферма\n\n<b>by @inomtee</b>")
+   await sleep(14500)
